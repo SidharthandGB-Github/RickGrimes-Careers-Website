@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Black Mesa Careers</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <style>
+      img.banner {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
+      <img
+        class="banner"
+        src="/static/Black Mesa Logo.jpg"
+        alt=""
+        height="300"
+      />
+      <h2 class="text-center mt-2 mb-4">About Black Mesa</h2>
+      <p class="lead">
+        Black Mesa Research Facility is a facility owned by Rick Grimes, whos
+        sole objective is to push forward inocations in the science field and to
+        propagate humanities next big step in its evolution. We do this by our
+        work ethics and our comitment to our employees and theirs to us. This
+        relationship is the backbone of our companies Success and reputation.
+      </p>
+      <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+      <div>
+        {% for job in jobs %}
+            {% include 'jobitem.html' %}
+        {% endfor %}
+      </div>
+      <dir class="text-center">
+        <button class="btn btn-primary btn-sm">Contact Us</button>
+        <p class="mt-4">Copyright 2022, Black Mesa</p>
+      </dir>
+    </div>
+  </body>
+</html>
